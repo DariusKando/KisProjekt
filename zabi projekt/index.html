@@ -5,102 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./kepek/favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
     <title>Regisztráció</title>
 </head>
 <body>
-    <div id="main">
+    <section id="main">
         <h1>Regisztráció</h1>
         <form id="form">
             <!-- Név -->
-            <img src="./kepek/nev.svg" alt="Név" class="svg">
-            <label for="nev">Név:</label>
-            <input type="text" id="nev" name="nev" required class="input">
-
-            <br><br>
-
+            <div class="retekdivek">
+                <label for="nev"><img src="./kepek/nev.svg" alt="Név" class="svg"></label>
+                <input type="text" id="nev" name="nev" aria-label="Név" maxlength="50" required class="input" placeholder="Név:">
+            </div>
+    
             <!-- Email -->
-            <img src="./kepek/email.svg" alt="Név" class="svg">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required class="input">
-            
-            <br><br>
-
+            <div class="retekdivek">
+                <label for="email"><img src="./kepek/email.svg" alt="Email" class="svg"></label>
+                <input type="email" id="email" name="email" aria-label="Email" required class="input" placeholder="Email:">
+            </div>
+    
             <!-- Jelszó -->
-             <img src="./kepek/password.svg" alt="Név" class="svg">
-            <label for="jelszo">Jelszó:</label>
-            <input type="text" id="jelszo" name="jelszo" required class="input">
-
-            <button type="button" onclick="generatePassword()" class="button">Jelszó generálása</button>
-            
-            <br><br>
-
+            <div class="retekdivek">
+                <label for="jelszo"><img src="./kepek/password.svg" alt="Jelszó" class="svg"></label>
+                <input type="password" id="jelszo" name="jelszo" aria-label="Jelszó" required class="input" placeholder="Jelszó:">
+                <img src="./kepek/eyeclosed.svg" alt="Jelszó rejtve" class="svg showpassword" id="toggle" onclick="togglePasswordVisibility()">
+                <button type="button" class="button" onclick="generatePassword()">Jelszó generálás</button>
+            </div>
+    
             <!-- Nem -->
-            <img src="./kepek/gender.svg" alt="Név" class="svg">
-            <label>Nem:</label>
-            <input type="radio" id="ferfi" name="nem" value="ferfi">
-            <label for="ferfi">Férfi</label>
-
-            <input type="radio" id="no" name="nem" value="no">
-            <label for="no">Nő</label>
-            
-            <br><br>
-            
+            <fieldset class="retekdivek">
+                <legend>Nem</legend>
+                <label for="ferfi"><input type="radio" id="ferfi" name="nem" value="ferfi" aria-label="Férfi">Férfi</label>
+                <label for="no"><input type="radio" id="no" name="nem" value="no" aria-label="Nő">Nő</label>
+            </fieldset>
+    
             <!-- Életkor -->
-            <label>Életkor:</label>
-
-            <input type="radio" id="18-20" name="eletkor" value="18-20">
-            <label for="18-20">18-20</label>
-
-            <input type="radio" id="21-24" name="eletkor" value="21-24">
-            <label for="21-24">21-24</label>
-
-            <input type="radio" id="25-30" name="eletkor" value="25-30">
-            <label for="25-30">25-30</label>
-
-            <input type="radio" id="30+" name="eletkor" value="30+">
-            <label for="30+">30+</label>
-            
-            <br><br>
-            
+            <fieldset class="retekdivek">
+                <legend>Életkor</legend>
+                <label for="18-20"><input type="radio" id="18-20" name="eletkor" value="18-20" aria-label="18-20">18-20</label>
+                <label for="21-24"><input type="radio" id="21-24" name="eletkor" value="21-24" aria-label="21-24">21-24</label>
+                <label for="25-30"><input type="radio" id="25-30" name="eletkor" value="25-30" aria-label="25-30">25-30</label>
+                <label for="30+"><input type="radio" id="30+" name="eletkor" value="30+" aria-label="30+">30+</label>
+            </fieldset>
+    
             <!-- Foglalkozás -->
-            <img src="./kepek/job.svg" alt="Név" class="svg">
-            <label for="foglalkozas">Foglalkozás:</label>
-            <input type="text" id="foglalkozas" name="foglalkozas" required class="input">
-            
-            <br><br>
-            
+            <div class="retekdivek">
+                <label for="foglalkozas"><img src="./kepek/job.svg" alt="Foglalkozás" class="svg"></label>
+                <input type="text" id="foglalkozas" name="foglalkozas" aria-label="Foglalkozás" required class="input" placeholder="Foglalkozás:">
+            </div>
+    
             <!-- Ágazat -->
-            <label>Ágazat:</label>
+            <div class="retekdivek">
+                <label for="Ágazat"><img src="./kepek/suitcase.svg" alt="Ágazat" class="svg"></label>
+                <select name="Ágazat" id="Ágazat" class="custom-select" aria-label="Ágazat" required>
+                    <option value="IT">IT</option>
+                    <option value="Egészségügy">Egészségügy</option>
+                    <option value="Oktatás">Oktatás</option>
+                    <option value="Gazdaság">Gazdaság</option>
+                    <option value="Építészet">Építészet</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Turizmus">Turizmus</option>
+                    <option value="Mezőgazdaság">Mezőgazdaság</option>
+                    <option value="Szórakoztatás">Szórakoztatás</option>
+                    <option value="Kreatív ipar">Kreatív ipar</option>
+                </select>
+            </div>
             
-            <br>
-
-            <table>
-                <tr>
-                    <td><input type="checkbox" id="it" name="agazat" value="IT"><label for="it">IT</label></td>
-                    <td><input type="checkbox" id="egeszsegugy" name="agazat" value="Egészségügy"><label for="egeszsegugy">Egészségügy</label></td>
-                    <td><input type="checkbox" id="oktatas" name="agazat" value="Oktatás"><label for="oktatas">Oktatás</label></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" id="gazdasag" name="agazat" value="Gazdaság"><label for="gazdasag">Gazdaság</label></td>
-                    <td><input type="checkbox" id="epiteszet" name="agazat" value="Építészet"><label for="epiteszet">Építészet</label></td>
-                    <td><input type="checkbox" id="marketing" name="agazat" value="Marketing"><label for="marketing">Marketing</label></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" id="turizmus" name="agazat" value="Turizmus"><label for="turizmus">Turizmus</label></td>
-                    <td><input type="checkbox" id="mezogazdasag" name="agazat" value="Mezőgazdaság"><label for="mezogazdasag">Mezőgazdaság</label></td>
-                    <td><input type="checkbox" id="szorakoztatas" name="agazat" value="Szórakoztatás"><label for="szorakoztatas">Szórakoztatás</label></td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" id="kreativ" name="agazat" value="Kreatív ipar"><label for="kreativ">Kreatív ipar</label></td>
-                </tr>
-            </table>
-            
-            <br>
-
             <!-- Submit -->
-            <button onclick="Send()" class="button">Regisztráció</button>
+            <button type="submit" class="button">Regisztráció</button>
         </form>
-    </div>
+    </section>
+    
+    <script src="app.js"></script>
 </body>
 </html>

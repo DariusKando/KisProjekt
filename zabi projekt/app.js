@@ -1,4 +1,18 @@
 let datas = [];
+const togglePassword = document.getElementById('toggle');
+const passwordInput = document.getElementById('jelszo');
+
+togglePassword.addEventListener('click', function () {
+    if (this.classList.contains('checked')) {
+        passwordInput.type = 'password';
+        this.classList.remove('checked');
+        this.src = './kepek/eyeclosed.svg';
+    } else {
+        passwordInput.type = 'text';
+        this.classList.add('checked');
+        this.src = './kepek/eyeopen.svg';
+    }
+});
 
 function generatePassword() {
     const chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -16,4 +30,3 @@ function Send(){
     const data = currentUrl.map(x => x.split('='));
     datas.push(data);
 }
-

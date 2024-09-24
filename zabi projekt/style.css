@@ -1,54 +1,135 @@
-body{
-    background-image: url("./kepek/wallpaperflare.com_wallpaper.jpg");
-    background-size: cover;
+body {
+    background-image: url("./kepek/wallpaper.jpg");
     font-family: 'Times New Roman', Times, serif;
+    background-size: cover;
 }
 
-#main{
-    background-image: linear-gradient(to bottom right,#E6E6FA, #F7CEFC, #C8A2C8);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+#main {
+    background-image: linear-gradient(to bottom right, #E6E6FA, #F7CEFC, #C8A2C8);
     border: 1px solid black;
-    height: fit-content;
     border-radius: 25px;
-    text-align: center;
-    position: fixed;
-    padding: 10px;
-    width: 500px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+    height: fit-content;
     margin: auto;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    width: 500px;
     inset: 0;
 }
 
-#form{
+#form {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    margin: auto;
     text-align: left;
     width: 340px;
-    margin: auto;
 }
 
-.input{
+.retekdivek, .button {
+    margin-top: 10px;
+}
+
+.svg {
+    height: 25px;
+    width: 25px;
+}
+
+.input {
     border-radius: 5px;
-    height: 20px;
-    width: 90%;
+    height: 25px;
+    width: 85%;
 }
 
-.button{
-    box-shadow: 0 -1px 0 #A10084 inset;
+.showpassword {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 25px;
+    padding: 0;
+    position: absolute;
+    right: 107px;
+    top: 173px;
+    width: 25px;
+}
+
+.showpassword:hover {
+    background-color: lightgray;
+}
+
+.button {
     background-color: #FF7782;
-    text-decoration: none;
     border-radius: 10px;
-    padding: 10px 20px;
+    box-shadow: 0 -1px 0 #A10084 inset;
     color: #ffffff;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.button:hover{
-    box-shadow: 0 -2px 0 #A10084 inset;
-    background-color: #ff1ea9;
-}
-
-.svg{
+.button img {
     height: 15px;
     width: 15px;
+}
+
+.button:hover {
+    background-color: #ff1ea9;
+    box-shadow: 0 -2px 0 #A10084 inset;
+}
+
+.custom-select-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.custom-select {
+    background-color: #fff;
+    background-image: url('./kepek/arrow.svg');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    border: 2px solid #d4d4d4;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 40px 10px 15px;
+    transition: border-color 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+}
+
+.custom-select:hover,
+.custom-select:focus {
+    border-color: #A10084;
+    outline: none;
+}
+
+.custom-select:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.custom-select option {
+    color: #333;
+}
+
+.custom-select-wrapper::after {
+    background-image: url('./kepek/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    height: 12px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
 }
