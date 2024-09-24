@@ -1,0 +1,54 @@
+body{
+    background-image: url("./kepek/wallpaperflare.com_wallpaper.jpg");
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#main{
+    background-image: linear-gradient(to bottom right,#E6E6FA, #F7CEFC, #C8A2C8);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+    border: 1px solid black;
+    height: fit-content;
+    border-radius: 25px;
+    text-align: center;
+    position: fixed;
+    padding: 10px;
+    width: 500px;
+    margin: auto;
+    inset: 0;
+}
+
+#form{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+    width: 340px;
+    margin: auto;
+}
+
+.input{
+    border-radius: 5px;
+    height: 20px;
+    width: 90%;
+}
+
+.button{
+    box-shadow: 0 -1px 0 #A10084 inset;
+    background-color: #FF7782;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #ffffff;
+}
+
+.button:hover{
+    box-shadow: 0 -2px 0 #A10084 inset;
+    background-color: #ff1ea9;
+}
+
+.svg{
+    height: 15px;
+    width: 15px;
+}

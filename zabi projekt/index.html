@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./kepek/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Regisztráció</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Regisztráció</h1>
+        <form id="form">
+            <!-- Név -->
+            <img src="./kepek/nev.svg" alt="Név" class="svg">
+            <label for="nev">Név:</label>
+            <input type="text" id="nev" name="nev" required class="input">
+
+            <br><br>
+
+            <!-- Email -->
+            <img src="./kepek/email.svg" alt="Név" class="svg">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required class="input">
+            
+            <br><br>
+
+            <!-- Jelszó -->
+             <img src="./kepek/password.svg" alt="Név" class="svg">
+            <label for="jelszo">Jelszó:</label>
+            <input type="text" id="jelszo" name="jelszo" required class="input">
+
+            <button type="button" onclick="generatePassword()" class="button">Jelszó generálása</button>
+            
+            <br><br>
+
+            <!-- Nem -->
+            <img src="./kepek/gender.svg" alt="Név" class="svg">
+            <label>Nem:</label>
+            <input type="radio" id="ferfi" name="nem" value="ferfi">
+            <label for="ferfi">Férfi</label>
+
+            <input type="radio" id="no" name="nem" value="no">
+            <label for="no">Nő</label>
+            
+            <br><br>
+            
+            <!-- Életkor -->
+            <label>Életkor:</label>
+
+            <input type="radio" id="18-20" name="eletkor" value="18-20">
+            <label for="18-20">18-20</label>
+
+            <input type="radio" id="21-24" name="eletkor" value="21-24">
+            <label for="21-24">21-24</label>
+
+            <input type="radio" id="25-30" name="eletkor" value="25-30">
+            <label for="25-30">25-30</label>
+
+            <input type="radio" id="30+" name="eletkor" value="30+">
+            <label for="30+">30+</label>
+            
+            <br><br>
+            
+            <!-- Foglalkozás -->
+            <img src="./kepek/job.svg" alt="Név" class="svg">
+            <label for="foglalkozas">Foglalkozás:</label>
+            <input type="text" id="foglalkozas" name="foglalkozas" required class="input">
+            
+            <br><br>
+            
+            <!-- Ágazat -->
+            <label>Ágazat:</label>
+            
+            <br>
+
+            <table>
+                <tr>
+                    <td><input type="checkbox" id="it" name="agazat" value="IT"><label for="it">IT</label></td>
+                    <td><input type="checkbox" id="egeszsegugy" name="agazat" value="Egészségügy"><label for="egeszsegugy">Egészségügy</label></td>
+                    <td><input type="checkbox" id="oktatas" name="agazat" value="Oktatás"><label for="oktatas">Oktatás</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="gazdasag" name="agazat" value="Gazdaság"><label for="gazdasag">Gazdaság</label></td>
+                    <td><input type="checkbox" id="epiteszet" name="agazat" value="Építészet"><label for="epiteszet">Építészet</label></td>
+                    <td><input type="checkbox" id="marketing" name="agazat" value="Marketing"><label for="marketing">Marketing</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="turizmus" name="agazat" value="Turizmus"><label for="turizmus">Turizmus</label></td>
+                    <td><input type="checkbox" id="mezogazdasag" name="agazat" value="Mezőgazdaság"><label for="mezogazdasag">Mezőgazdaság</label></td>
+                    <td><input type="checkbox" id="szorakoztatas" name="agazat" value="Szórakoztatás"><label for="szorakoztatas">Szórakoztatás</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="kreativ" name="agazat" value="Kreatív ipar"><label for="kreativ">Kreatív ipar</label></td>
+                </tr>
+            </table>
+            
+            <br>
+
+            <!-- Submit -->
+            <button onclick="Send()" class="button">Regisztráció</button>
+        </form>
+        <p>You entered: <span id="result"></span></p>
+    </div>
+</body>
+</html>
