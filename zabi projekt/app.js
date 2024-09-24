@@ -16,3 +16,4 @@ function Send(){
     const data = currentUrl.map(x => x.split('='));
     datas.push(data);
 }
+
